@@ -1,0 +1,26 @@
+{
+  "name": "player-m3u-online",
+  "version": "1.0.0",
+  "description": "Player online para carregar e reproduzir listas M3U",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js",
+    "vercel-build": "npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "M3U",
+    "player",
+    "online",
+    "streaming"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
+}
