@@ -2,11 +2,8 @@ const express = require("express");
 const axios = require("axios");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
-app.use(express.static("public"));
-
+// Adicionar rota principal
 app.get("/api/m3u", async (req, res) => {
   const { url } = req.query;
 
@@ -29,6 +26,4 @@ function parseM3U(content) {
   return lines.filter((line) => line.trim() && !line.startsWith("#"));
 }
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
-});
+module.exports = app; // Exporte o app para ser tratado pelo Vercel
